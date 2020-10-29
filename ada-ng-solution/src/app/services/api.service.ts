@@ -16,6 +16,9 @@ export class ApiService {
     return this._httpClient.get(`${this.baseUrl}/nodes`);
   }
 
+  public getNodeById(id: string): Observable<any> {
+    return this._httpClient.get(`${this.baseUrl}/nodes/${id}`);
+  }
 
 }
 

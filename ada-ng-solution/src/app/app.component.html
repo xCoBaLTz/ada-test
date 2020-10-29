@@ -1,10 +1,10 @@
 <div class="flex-box">
   <div class="side-panel-wrapper">
-    <ada-side-panel [values]="nodes"></ada-side-panel>
+    <ada-side-panel [values]="titleNodes" (titleClicked)="onTitleClicked($event)"></ada-side-panel>
   </div>
 
   <div class="details-wrapper">
-    <ada-details></ada-details>
+    <ada-details [selectedNode]="fullNodeDetails"></ada-details>
   </div>
 </div>
 

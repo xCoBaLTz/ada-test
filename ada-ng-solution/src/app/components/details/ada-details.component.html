@@ -1,1 +1,12 @@
-<p>ada-details works!</p>
+<div *ngIf="selectedNode" class="details">
+  <div>{{selectedNode.id}}</div>
+  <div>{{selectedNode.title}}</div>
+  <div *ngFor="let content of selectedNode.content" class="content-wrapper">
+    <div *ngIf="content.type === 'text'" class="text-content">
+      {{content.body}}
+    </div>
+    <div *ngIf="content.type === 'image'" class="image-content">
+      <img [src]="content.url" [alt]="content.url"/>
+    </div>
+  </div>
+</div>

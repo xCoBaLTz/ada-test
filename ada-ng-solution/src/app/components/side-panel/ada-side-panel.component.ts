@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Nodes } from '../../models/Nodes';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FileNode } from '../../models/FileNode';
 
 @Component({
   selector: 'ada-side-panel',
@@ -9,7 +9,10 @@ import { Nodes } from '../../models/Nodes';
 export class AdaSidePanelComponent implements OnInit {
 
   @Input()
-  public values: Nodes[] = [];
+  public values: FileNode[] = [];
+
+  @Output()
+  public titleClicked: EventEmitter<string> = new EventEmitter();
 
   constructor() {
   }
@@ -17,4 +20,7 @@ export class AdaSidePanelComponent implements OnInit {
   public ngOnInit(): void {
   }
 
+  public onClicked(id: string) {
+    this.titleClicked.emit(id);
+  }
 }

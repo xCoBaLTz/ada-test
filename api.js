@@ -3,7 +3,7 @@ const cors = require('cors');
 const express = require('express');
 
 const app = express();
-app.use(cors());
+app.use(express.json(), cors());
 
 let db = new sqlite3.Database('./database.db');
 

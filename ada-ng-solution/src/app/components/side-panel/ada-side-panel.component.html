@@ -1,3 +1,6 @@
-<div *ngFor="let value of values" class="title-list">
-  {{value.title}}
+<div class="flex-box-column">
+  <button *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
+    {{value.title}}
+  </button>
 </div>
+

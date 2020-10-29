@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Nodes } from '../../models/Nodes';
+import { FileNodeDetails } from '../../models/FileNodeDetails';
 
 @Component({
   selector: 'ada-details',
@@ -9,13 +9,12 @@ import { Nodes } from '../../models/Nodes';
 export class AdaDetailsComponent implements OnInit {
 
   @Input()
-  public value: Nodes;
+  public selectedNode: FileNodeDetails;
 
   constructor() {
   }
 
   public ngOnInit(): void {
-
   }
 
 }
