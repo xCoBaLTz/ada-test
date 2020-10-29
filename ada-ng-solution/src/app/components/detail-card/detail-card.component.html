@@ -1,0 +1,19 @@
+<div *ngIf="content.type === 'text' && content.body.trim().length > 0" class="card">
+  <h2>{{content.type}}</h2>
+  <div class="card-content">
+    <div class="text-content">
+      {{content.body}}
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="content.type === 'image'" class="card">
+  <h2>{{content.type}}</h2>
+  <div class="card-content">
+    <div class="image-content">
+      <img [src]="content.url" [alt]="content.url"/>
+    </div>
+  </div>
+</div>
+

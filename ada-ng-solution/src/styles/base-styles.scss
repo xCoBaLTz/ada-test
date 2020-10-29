@@ -18,3 +18,16 @@ body {
 html, body {
   height: 100%;
 }
+
+.flex-box-column-start {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.flex-box-column-center {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+

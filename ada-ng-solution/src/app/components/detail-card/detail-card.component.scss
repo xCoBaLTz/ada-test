@@ -1,0 +1,24 @@
+@import "src/styles/base-styles";
+
+.card {
+  margin: rem(50) 0;
+  padding: 0 rem(50) rem(50);
+  max-width: rem(1200);
+  min-width: rem(700);
+  border: 1px solid #c2c2c2;
+  border-radius: 4px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.card-content {
+  border: 1px solid #4b4b4b;
+  border-radius: 4px;
+  padding: rem(16);
+}
+
+@media only screen and (max-width: 640px) {
+
+}

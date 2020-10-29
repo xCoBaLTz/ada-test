@@ -1,12 +1,6 @@
-<div *ngIf="selectedNode" class="details">
-  <div>{{selectedNode.id}}</div>
-  <div>{{selectedNode.title}}</div>
+<div *ngIf="selectedNode" class="details flex-box-column-center">
+  <h1>{{selectedNode.id}} - {{selectedNode.title}}</h1>
   <div *ngFor="let content of selectedNode.content" class="content-wrapper">
-    <div *ngIf="content.type === 'text'" class="text-content">
-      {{content.body}}
-    </div>
-    <div *ngIf="content.type === 'image'" class="image-content">
-      <img [src]="content.url" [alt]="content.url"/>
-    </div>
+    <detail-card [content]="content"></detail-card>
   </div>
 </div>

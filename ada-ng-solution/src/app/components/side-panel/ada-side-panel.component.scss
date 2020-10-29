@@ -1,7 +1,5 @@
-@import "./src/styles/base-styles";
+@import "src/styles/base-styles";
 
-.flex-box-column {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
+.title-list {
+  width: 100%;
 }

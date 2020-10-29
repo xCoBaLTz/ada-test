@@ -1,6 +1,19 @@
-<div class="flex-box-column">
-  <button *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
-    {{value.title}}
-  </button>
+<div class="flex-box-column-start">
+
+  <header>
+    <div class="search-wrapper">
+      <label>
+        <input type="search" [placeholder]="'Enter text'"/>
+      </label>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <div class="flex-box-column-start">
+      <button *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
+        {{value.title}}
+      </button>
+    </div>
+  </main>
 </div>
 
