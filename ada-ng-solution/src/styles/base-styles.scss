@@ -31,3 +31,14 @@ html, body {
   align-items: center;
 }
 
+.flex-box-row-start {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}
+
+.flex-box-row-center {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}

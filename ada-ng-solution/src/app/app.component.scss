@@ -6,16 +6,11 @@
   width: 100%;
 }
 
-.flex-box, .side-panel-wrapper, .details-wrapper {
+.flex-box-row-center, .side-panel-wrapper, .details-wrapper {
   height: 100%;
-}
-
-.flex-box {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
 }
 
 .details-wrapper {
   flex-grow: 1;
+  overflow: auto;
 }

@@ -1,19 +1,14 @@
-<div class="flex-box-column-start">
+<div class="flex-box-column-center">
+  <div class="search-wrapper">
+    <input type="search" class="search-input" [attr.placeholder]="'Search'"/>
+  </div>
 
-  <header>
-    <div class="search-wrapper">
-      <label>
-        <input type="search" [placeholder]="'Enter text'"/>
-      </label>
-    </div>
-  </header>
-
-  <main class="main-wrapper">
-    <div class="flex-box-column-start">
+  <div class="main-wrapper">
+    <div class="flex-box-column-start title-wrapper">
       <button *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
         {{value.title}}
       </button>
     </div>
-  </main>
+  </div>
 </div>
 
