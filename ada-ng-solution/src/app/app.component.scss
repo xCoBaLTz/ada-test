@@ -1,18 +1,21 @@
+@import "../styles/base-styles";
+
 :host {
   display: block;
   height: 100%;
   width: 100%;
-
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-.app-wrapper {
+.flex-box, .side-panel-wrapper, .details-wrapper {
+  height: 100%;
+}
+
+.flex-box {
   display: flex;
-  flex-direction: column;
-  flex-flow: nowrap;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.details-wrapper {
+  flex-grow: 1;
 }

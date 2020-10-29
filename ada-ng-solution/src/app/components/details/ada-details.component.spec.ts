@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdaSideNavComponent } from './ada-side-nav.component';
+import { AdaDetailsComponent } from './ada-details.component';
 
-describe('AdaSideNavComponent', () => {
-  let component: AdaSideNavComponent;
-  let fixture: ComponentFixture<AdaSideNavComponent>;
+describe('DetailsComponent', () => {
+  let component: AdaDetailsComponent;
+  let fixture: ComponentFixture<AdaDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AdaSideNavComponent ]
+      declarations: [AdaDetailsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdaSideNavComponent);
+    fixture = TestBed.createComponent(AdaDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
