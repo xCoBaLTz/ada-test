@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   public fullNodeDetails: FileNodeDetails;
 
 
-  constructor(private _apiService: ApiService) {
+  constructor(private apiService: ApiService) {
   }
 
 
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     this._getNodes();
   }
 
-  public onTitleClicked(id: string) {
+  public onTitleClicked(id: string): void {
     this._getNode(id);
   }
 
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
   }
 
   private _getNodesBySearchTerm(search: string): void {
-    this._apiService.getNodesBySearchTerm(search).pipe(take(1))
+    this.apiService.getNodesBySearchTerm(search).pipe(take(1))
       .subscribe((response: FileNode[]) => {
         this.titleNodes = response.map(value => {
           return {
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
 
 
   private _getNodes(): void {
-    this._apiService.getNodes().pipe(take(1))
+    this.apiService.getNodes().pipe(take(1))
       .subscribe((response: FileNode[]) => {
         this.titleNodes = response.map(value => {
           return {
@@ -63,7 +63,7 @@ export class AppComponent implements OnInit {
   }
 
   private _getNode(id: string): void {
-    this._apiService.getNodeById(id).pipe(take(1))
+    this.apiService.getNodeById(id).pipe(take(1))
       .subscribe((response: FileNodeDetails[]) => {
         if (!response || response.length === 0) {
           alert(`Error: No node found with id: ${id}`);

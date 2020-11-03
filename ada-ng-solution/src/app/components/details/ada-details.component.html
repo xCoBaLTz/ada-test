@@ -1,6 +1,6 @@
 <div *ngIf="selectedNode" class="details flex-box-column-center">
   <h1>{{selectedNode.id}} - {{selectedNode.title}}</h1>
   <div *ngFor="let content of selectedNode.content" class="content-wrapper">
-    <detail-card [content]="content"></detail-card>
+    <app-detail-card [content]="content"></app-detail-card>
   </div>
 </div>

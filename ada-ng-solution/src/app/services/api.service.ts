@@ -9,19 +9,19 @@ export class ApiService {
 
   private readonly baseUrl: string = 'http://localhost:5000';
 
-  constructor(private _httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
   public getNodes(): Observable<any> {
-    return this._httpClient.get(`${this.baseUrl}/nodes`);
+    return this.httpClient.get(`${this.baseUrl}/nodes`);
   }
 
   public getNodeById(id: string): Observable<any> {
-    return this._httpClient.get(`${this.baseUrl}/nodes/${id}`);
+    return this.httpClient.get(`${this.baseUrl}/nodes/${id}`);
   }
 
   public getNodesBySearchTerm(search: string): Observable<any> {
-    return this._httpClient.post(`${this.baseUrl}/nodes/search`, {'query': search});
+    return this.httpClient.post(`${this.baseUrl}/nodes/search`, {query: search});
   }
 }
 

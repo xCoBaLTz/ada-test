@@ -4,7 +4,7 @@ import { fromEvent } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
 @Component({
-  selector: 'ada-side-panel',
+  selector: 'app-side-panel',
   templateUrl: './ada-side-panel.component.html',
   styleUrls: ['./ada-side-panel.component.scss']
 })
@@ -22,7 +22,7 @@ export class AdaSidePanelComponent implements AfterViewInit {
   @ViewChild('input')
   public queryInput: ElementRef;
 
-  public query: string = '';
+  public query: string;
   public readonly queryInputDebounceTime: number = 300;
 
   constructor() {
@@ -32,11 +32,11 @@ export class AdaSidePanelComponent implements AfterViewInit {
     this._listenToQueryInput();
   }
 
-  public onClicked(id: string) {
+  public onClicked(id: string): void {
     this.titleClicked.emit(id);
   }
 
-  public _listenToQueryInput() {
+  private _listenToQueryInput(): void {
     fromEvent(this.queryInput.nativeElement, 'input')
       .pipe(
         debounceTime(this.queryInputDebounceTime),
