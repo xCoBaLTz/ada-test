@@ -1,4 +1,4 @@
-<div *ngIf="content.type === 'text' && content.body.trim().length > 0" class="card">
+<div *ngIf="content?.type === 'text' && content?.body.trim().length > 0" class="card">
   <h2>{{content.type}}</h2>
   <div class="card-content">
     <div class="text-content">
@@ -8,7 +8,7 @@
 </div>
 
 
-<div *ngIf="content.type === 'image'" class="card">
+<div *ngIf="content?.type === 'image'" class="card">
   <h2>{{content.type}}</h2>
   <div class="card-content">
     <div class="image-content">

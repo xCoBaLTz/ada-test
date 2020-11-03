@@ -91,6 +91,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "codeCoverage": true,
+            "codeCoverageExclude": [
+              "src/app/**/generated/**/*"
+            ],
             "styles": [
               "src/styles.scss"
             ],
