@@ -3,10 +3,10 @@ import { Content } from '../../models/Content';
 
 @Component({
   selector: 'app-detail-card',
-  templateUrl: './detail-card.component.html',
-  styleUrls: ['./detail-card.component.scss']
+  templateUrl: './ada-detail-card.component.html',
+  styleUrls: ['./ada-detail-card.component.scss']
 })
-export class DetailCardComponent {
+export class AdaDetailCardComponent {
 
   @Input()
   public content: Content;

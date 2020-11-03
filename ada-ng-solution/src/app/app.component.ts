@@ -30,6 +30,7 @@ export class AppComponent implements OnInit {
 
 
   public onSearchChanged(search: string): void {
+    this.fullNodeDetails = null;
     !!search ? this._getNodesBySearchTerm(search) : this._getNodes();
   }
 

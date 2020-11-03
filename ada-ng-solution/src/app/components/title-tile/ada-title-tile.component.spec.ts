@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdaDetailsComponent } from './ada-details.component';
+import { AdaTitleTileComponent } from './ada-title-tile.component';
 
-describe('AdaDetailsComponent', () => {
-  let component: AdaDetailsComponent;
-  let fixture: ComponentFixture<AdaDetailsComponent>;
+describe('TitleTileComponent', () => {
+  let component: AdaTitleTileComponent;
+  let fixture: ComponentFixture<AdaTitleTileComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AdaDetailsComponent]
+      declarations: [AdaTitleTileComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdaDetailsComponent);
+    fixture = TestBed.createComponent(AdaTitleTileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

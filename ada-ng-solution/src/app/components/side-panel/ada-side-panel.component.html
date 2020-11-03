@@ -5,8 +5,9 @@
 
   <div class="main-wrapper">
     <div class="flex-box-column-start title-wrapper">
-      <div *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
-        {{value.title}}
+      <div *ngFor="let value of values">
+        <app-title-tile [value]="value" (clicked)="onClicked(value.id)"
+                        [selected]="selectedTile === value.id"></app-title-tile>
       </div>
     </div>
   </div>

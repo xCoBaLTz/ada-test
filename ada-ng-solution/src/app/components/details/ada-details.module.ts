@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdaDetailsComponent } from './ada-details.component';
-import { DetailCardModule } from '../detail-card/detail-card.module';
+import { AdaDetailCardModule } from '../detail-card/ada-detail-card.module';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { DetailCardModule } from '../detail-card/detail-card.module';
   ],
   imports: [
     CommonModule,
-    DetailCardModule
+    AdaDetailCardModule
   ]
 })
 export class AdaDetailsModule {

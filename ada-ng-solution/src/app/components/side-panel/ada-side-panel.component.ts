@@ -23,7 +23,9 @@ export class AdaSidePanelComponent implements AfterViewInit {
   public queryInput: ElementRef;
 
   public query: string;
-  public readonly queryInputDebounceTime: number = 300;
+  public selectedTile: string;
+
+  private readonly _queryInputDebounceTime: number = 300;
 
   constructor() {
   }
@@ -33,19 +35,20 @@ export class AdaSidePanelComponent implements AfterViewInit {
   }
 
   public onClicked(id: string): void {
+    this.selectedTile = id;
     this.titleClicked.emit(id);
   }
 
   private _listenToQueryInput(): void {
     fromEvent(this.queryInput.nativeElement, 'input')
       .pipe(
-        debounceTime(this.queryInputDebounceTime),
+        debounceTime(this._queryInputDebounceTime),
         map((event: Event) => (event.target as HTMLInputElement).value),
         distinctUntilChanged(null, (value) => value)
       )
       .subscribe((queryValue: string) => {
-        console.log(queryValue);
         this.query = queryValue;
+        this.selectedTile = '';
         this.searchChanged.emit(this.query);
       });
   }

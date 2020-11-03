@@ -1,0 +1,13 @@
+@import "src/styles/base-styles";
+
+.selected {
+  background-color: #2bbbd2;
+}
+
+.title-list {
+  padding: rem(20);
+
+  &:hover {
+    background-color: #2bbbd2;
+  }
+}
