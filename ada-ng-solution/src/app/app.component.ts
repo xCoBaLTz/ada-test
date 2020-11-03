@@ -29,6 +29,25 @@ export class AppComponent implements OnInit {
   }
 
 
+  public onSearchChanged(search: string): void {
+    !!search ? this._getNodesBySearchTerm(search) : this._getNodes();
+  }
+
+  private _getNodesBySearchTerm(search: string): void {
+    this._apiService.getNodesBySearchTerm(search).pipe(take(1))
+      .subscribe((response: FileNode[]) => {
+        this.titleNodes = response.map(value => {
+          return {
+            id: value.id,
+            title: value.title
+          } as FileNode;
+        });
+      }, (error: HttpErrorResponse) => {
+        alert(`Error: ${error.message}, Status: ${error.status}: ${error.statusText}`);
+      });
+  }
+
+
   private _getNodes(): void {
     this._apiService.getNodes().pipe(take(1))
       .subscribe((response: FileNode[]) => {
@@ -39,7 +58,7 @@ export class AppComponent implements OnInit {
           } as FileNode;
         });
       }, (error: HttpErrorResponse) => {
-        console.log(`Error: ${error.message}, Status: ${error.status}: ${error.statusText}`);
+        alert(`Error: ${error.message}, Status: ${error.status}: ${error.statusText}`);
       });
   }
 
@@ -47,7 +66,7 @@ export class AppComponent implements OnInit {
     this._apiService.getNodeById(id).pipe(take(1))
       .subscribe((response: FileNodeDetails[]) => {
         if (!response || response.length === 0) {
-          console.log(`Error: No node found with id: ${id}`);
+          alert(`Error: No node found with id: ${id}`);
           return;
         }
 
@@ -64,7 +83,7 @@ export class AppComponent implements OnInit {
           })
         });
       }, (error: HttpErrorResponse) => {
-        console.log(`Error: ${error.message}, Status: ${error.status}: ${error.statusText}`);
+        alert(`Error: ${error.message}, Status: ${error.status}: ${error.statusText}`);
       });
   }
 }

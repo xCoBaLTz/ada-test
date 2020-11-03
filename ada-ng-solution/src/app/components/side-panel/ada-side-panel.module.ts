@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdaSidePanelComponent } from './ada-side-panel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AdaSidePanelComponent],
@@ -8,7 +9,8 @@ import { AdaSidePanelComponent } from './ada-side-panel.component';
     AdaSidePanelComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class AdaSidePanelModule {

@@ -1,6 +1,7 @@
 <div class="flex-box-row-center">
   <div class="side-panel-wrapper">
-    <ada-side-panel [values]="titleNodes" (titleClicked)="onTitleClicked($event)"></ada-side-panel>
+    <ada-side-panel [values]="titleNodes" (titleClicked)="onTitleClicked($event)"
+                    (searchChanged)="onSearchChanged($event)"></ada-side-panel>
   </div>
 
   <div class="details-wrapper">

@@ -20,5 +20,8 @@ export class ApiService {
     return this._httpClient.get(`${this.baseUrl}/nodes/${id}`);
   }
 
+  public getNodesBySearchTerm(search: string): Observable<any> {
+    return this._httpClient.post(`${this.baseUrl}/nodes/search`, {'query': search});
+  }
 }
 
