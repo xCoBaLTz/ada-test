@@ -1,13 +1,13 @@
-<div class="flex-box-column-center">
+<div class="flex-box-column-center panel-wrapper">
   <div class="search-wrapper">
     <input type="search" class="search-input" [attr.placeholder]="'Search'"/>
   </div>
 
   <div class="main-wrapper">
     <div class="flex-box-column-start title-wrapper">
-      <button *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
+      <div *ngFor="let value of values" class="title-list" (click)="onClicked(value.id)">
         {{value.title}}
-      </button>
+      </div>
     </div>
   </div>
 </div>

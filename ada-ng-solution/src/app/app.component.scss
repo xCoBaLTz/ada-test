@@ -10,7 +10,12 @@
   height: 100%;
 }
 
+.side-panel-wrapper {
+  width: 25%;
+  background-color: #98f1ff;
+}
+
 .details-wrapper {
+  width: 100%;
   flex-grow: 1;
-  overflow: auto;
 }
